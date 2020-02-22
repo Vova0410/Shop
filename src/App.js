@@ -25,7 +25,7 @@ class App extends Component {
                 <Card.Group itemsPerRow={4}>
                     {!isReady ? "LOADING..." : books.books.map((book, index) => (
                             <Card key={index}>
-                                <Image src={book.image} wrapped ui={true}/>
+                                <Image src={book.image} wrapped ui={false}/>
                                 <Card.Content>
                                     <Card.Header>{book.title}</Card.Header>
                                     <Card.Meta>
