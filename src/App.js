@@ -4,8 +4,9 @@ import {connect} from "react-redux";
 import {setBooksKreator} from "./actions/books-action";
 import * as  axios from 'axios';
 
-import {Container, Card, Icon, Image} from 'semantic-ui-react';
+import {Container, Card} from 'semantic-ui-react';
 import MenuHeader from "./components/menu/Menu";
+import BookCard from "./components/bookCard/BookCard";
 
 class App extends Component {
 
@@ -24,24 +25,7 @@ class App extends Component {
                 <MenuHeader />
                 <Card.Group itemsPerRow={4}>
                     {!isReady ? "LOADING..." : books.books.map((book, index) => (
-                            <Card key={index}>
-                                <Image src={book.image} wrapped ui={false}/>
-                                <Card.Content>
-                                    <Card.Header>{book.title}</Card.Header>
-                                    <Card.Meta>
-                                        <span className='date'>Joined in 2015</span>
-                                    </Card.Meta>
-                                    <Card.Description>
-                                        {book.author}
-                                    </Card.Description>
-                                </Card.Content>
-                                <Card.Content extra>
-                                    <a>
-                                        <Icon name='user'/>
-                                        22 Friends
-                                    </a>
-                                </Card.Content>
-                            </Card>
+                        <BookCard book={book} index={index} />
                         )
                     )}
                 </Card.Group>

@@ -1,14 +1,13 @@
 import React from 'react';
 import { Menu } from 'semantic-ui-react';
 
-const MenuHeader = () => {
-    return (
+const MenuHeader = () => (
         <Menu>
-            <Menu.Item
+            {/*<Menu.Item
                 name='browse'
             >
                 Browse
-            </Menu.Item>
+            </Menu.Item>*/}
 
             <Menu.Item
                 name='submit'
@@ -30,7 +29,6 @@ const MenuHeader = () => {
                 </Menu.Item>
             </Menu.Menu>
         </Menu>
-    )
-};
+);
 
 export default MenuHeader;
